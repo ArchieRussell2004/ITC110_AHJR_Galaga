@@ -17,11 +17,11 @@ public class Build_A_Baddie : MonoBehaviour
     {
         if (Vector3.Distance(this.gameObject.transform.position, badGuyBrain.player.transform.position) <= 2.0f)
         {
-            Explode();
+            Shoot();
         }
     }
 
-    public void Explode()
+    public void Shoot()
     {
         badGuyBrain.player.GetComponent<CharacterBrain>().health--;
         badGuyBrain.Despawn();
